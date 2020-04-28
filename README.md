@@ -5,23 +5,28 @@
 ### Brandon Olson (Section B), Afshawn Lotfi (B), Ian Kim (A), Will Stull (A)
 
 # Presentation
-
 [![](https://img.youtube.com/vi/N7F6d9_lkUI/0.jpg)](https://youtu.be/N7F6d9_lkUI)
 
-# Demonstration
 
+# Demonstration
 [![](https://img.youtube.com/vi/aPNwgx1q9cE/0.jpg)](https://youtu.be/aPNwgx1q9cE)
 
+# Project Repository
+[Phonerobot](https://github.com/phonerobot/phonerobot)
 
 
-4 Wheel Version            |  2 Wheel Version
+4 Wheel Version            | 2 Wheel Version
 :-------------------------:|:-------------------------:
 ![](https://i.imgur.com/iXrinfI.png)  |  ![](https://i.imgur.com/IVF86xf.png)
-
 
 # Project Overview
 
 The goal of this project was to create a self driving car that could autonomously navigate to a desired point in the real world. This is primarily accomplished via the ARKit library which among many features includes image tracking and localization. By placing a specific image (below) within the field of view of a camera the image tracking software is able to locate the position of the image relative to the camera’s current position.
+
+AR Maker to Follow|  
+:----------------------------:
+![](assets/README-b0d52dc0.png)
+
 
 Using this information a program can drive motors connected to the camera and move towards the desired location.
 
@@ -30,7 +35,6 @@ Using this information a program can drive motors connected to the camera and mo
 In order to facilitate communication between the MBED and our Swift code we utilized the Adafruit Bluefruit LE Connect app in conjunction with the MBED bluetooth module. This software allowed for the direct connection and communication between the phone and the MBED in order to move the robot to the anchor marker.
 
 # ARKit
-
 ARKit is an iOS based library for utilizing Augmented Reality in Swift. This software was used for Marker Tracking and Localization in order to navigate the robot.
 
 # Dead Reckoning Navigation
