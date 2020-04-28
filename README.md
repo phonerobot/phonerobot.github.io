@@ -2,15 +2,17 @@
 ### Brandon Olson (Section B), Afshawn Lotfi (B), Ian Kim (A), Will Stull (A)
 
 # Presentation
-[![Presentation]()](https://youtu.be/N7F6d9_lkUI)
+<video src="https://youtu.be/N7F6d9_lkUI" width="320" height="200" controls preload></video>
 
 # Demonstration
-[![Demonstration]()](https://youtu.be/aPNwgx1q9cE)
+<video src="https://youtu.be/aPNwgx1q9cE" width="320" height="200" controls preload></video>
 
 
 
 # Project Overview
 The goal of this project was to create a self driving car that could autonomously navigate to a desired point in the real world. This is primarily accomplished via the ARKit library which among many features includes image tracking and localization. By placing a specific image (below) within the field of view of a camera the image tracking software is able to locate the position of the image relative to the camera’s current position.  
+
+![](assets/README-b0d52dc0.png)
 
 Using this information a program can drive motors connected to the camera and move towards the desired location.
 
@@ -19,7 +21,7 @@ Using this information a program can drive motors connected to the camera and mo
 In order to facilitate communication between the MBED and our Swift code we utilized the Adafruit Bluefruit LE Connect app in conjunction with the MBED bluetooth module. This software allowed for the direct connection and communication between the phone and the MBED in order to move the robot to the anchor marker.
 
 # ARKit
-ARKit is an iOS based library for utilizing Augmented Reality in Swift. This software was used for Marker Tracking and Localization in order to navigate the robot. 
+ARKit is an iOS based library for utilizing Augmented Reality in Swift. This software was used for Marker Tracking and Localization in order to navigate the robot.
 
 # Dead Reckoning Navigation
 
@@ -41,7 +43,7 @@ PwmOut Motor4(p26);
 
 int main()
 {
-    
+
     Motor1 = 0.0;
     Motor2 = 0.0;
     Motor3 = 0.0;
@@ -56,7 +58,7 @@ int main()
                 if (blue.getc()==char(~('!' + 'B' + bnum + bhit))) { //checksum OK?
                     myled = bnum - '0'; //current button number will appear on LEDs
                     switch (bnum) {
-                       
+
                         case '5': //button 5 up arrow
                             if (bhit=='1') {
                               Motor1 = 0.5;
@@ -70,7 +72,7 @@ int main()
                               Motor2 = 0.0;
                               Motor3 = 0.0;
                               Motor4 = 0.0;
-                                
+
                             }
                             break;
                         case '6': //button 6 down arrow
@@ -79,7 +81,7 @@ int main()
                               Motor2 = 0.0;
                               Motor3 = 0.0;
                               Motor4 = 0.0;
-                                
+
                                 //add hit code here
                             } else {
                               Motor1 = 0.0;
@@ -102,7 +104,7 @@ int main()
                               Motor2 = 0.0;
                               Motor3 = 0.0;
                               Motor4 = 0.0;
-                                
+
                             }
                             break;
                         case '8': //button 8 right arrow
@@ -112,7 +114,7 @@ int main()
                               Motor2 = 0.95;
                               Motor3 = 0.2;
                               Motor4 = 0.2;
-                                
+
                             } else {
                                 //add release code here
                               Motor1 = 0.0;
@@ -135,16 +137,17 @@ int main()
 Due to the COVID-19 outbreak we all decided to build our own scale vehicle. The 4180 Sparkfun kit includes many of the parts required to build one, but many of us decided to purchase a Car Chassis Kit from Amazon.
 The kits purchased required soldering for the motors, but these could be swapped for the pre-soldered equivalents in our 4180 kits.
 
-Major Components
-MBED LPC 1768
-Adafruit Bluetooth Module
-2-4 Wheels
-2-4 Motors
-Chassis for mounting everything
-Breadboard
-Battery Box + AA Batteries
-Phone
-(Optional) Phone Mount
+- Major Components
+- MBED LPC 1768
+- Adafruit Bluetooth Module
+- 2-4 Wheels
+- 2-4 Motors
+- Chassis for mounting everything
+- Breadboard
+- Battery Box + AA Batteries
+- Phone
+- (Optional) Phone Mount
 
 The phone is connected via bluetooth to the MBED, but may also power the MBED via Serial. The phone processes camera input and relays commands to the MBED. The MBED parses the commands and drives the motors, directing the car as desired.
 
+![](assets/README-1a0c2c96.png)
