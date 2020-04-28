@@ -3,10 +3,12 @@
 
 # Presentation
 [![](https://img.youtube.com/vi/N7F6d9_lkUI/0.jpg)](https://youtu.be/N7F6d9_lkUI)
+<video src="https://youtu.be/N7F6d9_lkUI" width="320" height="200" controls preload></video>
 
 
 # Demonstration
 [![](https://img.youtube.com/vi/aPNwgx1q9cE/0.jpg)](https://youtu.be/aPNwgx1q9cE)
+<video src="https://youtu.be/aPNwgx1q9cE" width="320" height="200" controls preload></video>
 
 
 
@@ -152,4 +154,11 @@ The kits purchased required soldering for the motors, but these could be swapped
 
 The phone is connected via bluetooth to the MBED, but may also power the MBED via Serial. The phone processes camera input and relays commands to the MBED. The MBED parses the commands and drives the motors, directing the car as desired.
 
+##### Schematic
+![](assets/README-eccac311.png)
+##### Unwired version
 ![](assets/README-1a0c2c96.png)
+##### Wired Version
+![](assets/README-fca42820.png)
+##### Two-wheeled version
+![](assets/README-28ecfc19.png)
