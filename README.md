@@ -3,14 +3,10 @@
 
 # Presentation
 [![](https://img.youtube.com/vi/N7F6d9_lkUI/0.jpg)](https://youtu.be/N7F6d9_lkUI)
-<video src="https://youtu.be/N7F6d9_lkUI" width="320" height="200" controls preload></video>
 
 
 # Demonstration
 [![](https://img.youtube.com/vi/aPNwgx1q9cE/0.jpg)](https://youtu.be/aPNwgx1q9cE)
-<video src="https://youtu.be/aPNwgx1q9cE" width="320" height="200" controls preload></video>
-
-
 
 
 # Project Overview
