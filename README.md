@@ -5,28 +5,28 @@
 ### Brandon Olson (Section B), Afshawn Lotfi (B), Ian Kim (A), Will Stull (A)
 
 # Presentation
+
 [![](https://img.youtube.com/vi/N7F6d9_lkUI/0.jpg)](https://youtu.be/N7F6d9_lkUI)
 
-
 # Demonstration
+
 [![](https://img.youtube.com/vi/aPNwgx1q9cE/0.jpg)](https://youtu.be/aPNwgx1q9cE)
 
 # Project Repository
+
 [Phonerobot](https://github.com/phonerobot/phonerobot)
 
 # Project Overview
 
-
-4 Wheel Version            | 2 Wheel Version
-:-------------------------:|:-------------------------:
-![](https://i.imgur.com/iXrinfI.png)  |  ![](https://i.imgur.com/IVF86xf.png)
-
+|           4 Wheel Version            |           2 Wheel Version            |
+| :----------------------------------: | :----------------------------------: |
+| ![](https://i.imgur.com/iXrinfI.png) | ![](https://i.imgur.com/IVF86xf.png) |
 
 The goal of this project was to create a self driving car that could autonomously navigate to a desired point in the real world. This is primarily accomplished via the ARKit library which among many features includes image tracking and localization. By placing a specific image (below) within the field of view of a camera the image tracking software is able to locate the position of the image relative to the camera’s current position.
 
 ![](assets/README-b0d52dc0.png)
-<br/>AR Maker to Follow
-
+<br/>
+_Hiro AR marker that robot follows_
 
 Using this information a program can drive motors connected to the camera and move towards the desired location.
 
@@ -39,7 +39,6 @@ The purpose of our MBED was to read commands from a phone via Bluetooth and pars
 [![](./assets/lpc1768_pinout.png)](./assets/lpc1768_pinout.png)
 
 #### MBED Code
-
 
 ```c++
 #include "mbed.h"
@@ -144,26 +143,23 @@ int main()
 }
 ```
 
-
 ## Adafruit Bluefruit LE Connect
 
 In order to facilitate communication between the MBED and our Swift code we utilized the Adafruit Bluefruit LE Connect app in conjunction with the MBED bluetooth module. This software allowed for the direct connection and communication between the phone and the MBED in order to move the robot to the anchor marker.
 
 #### Adafruit Bluefruit Pinout to MBED
 
-| mbed              | Adafruit BLE  |
-| -----------------|:-------------:| 
-| gnd              | gnd           | 
-| VU(5v)           | Vin (3.3-16V) |
-| nc               | RTS           |
-| Gnd              | CTS           |
-| p27 (Serial RX)  | TXO           |
-| p28 (Serial TX)  | RXI           |
-
-
-
+| mbed            | Adafruit BLE  |
+| --------------- | :-----------: |
+| gnd             |      gnd      |
+| VU(5v)          | Vin (3.3-16V) |
+| nc              |      RTS      |
+| Gnd             |      CTS      |
+| p27 (Serial RX) |      TXO      |
+| p28 (Serial TX) |      RXI      |
 
 ## IOS ARKit
+
 ARKit is an iOS based library for utilizing Augmented Reality in Swift. This software was used for Marker Tracking and Localization in order to navigate the robot.
 
 #### AR Swift Code
@@ -207,8 +203,6 @@ if (self.x > 0.1) {
 ### Dead Reckoning Navigation
 
 In order to navigate the Robot to the specified location, a method of dead reckoning was used alongside AR. Two markers were made by the ARKit, an Anchor Marker of the declared destination and a Position Marker of the phone. With these two markers, we were able to figure out which direction to turn by comparing the X-vector of the Anchor and the Position Marker as well as figure out our relative position to the Anchor using the Z-vector. When our Position Z-vector reaches the Anchor Z-vector and the X-vectors match, the robot will stop.
-
-
 
 # Physical Build
 
