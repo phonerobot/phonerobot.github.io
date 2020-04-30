@@ -145,7 +145,7 @@ int main()
 
 ## Adafruit Bluefruit LE Connect
 
-In order to facilitate communication between the MBED and our Swift code we utilized the Adafruit Bluefruit LE Connect app in conjunction with the MBED bluetooth module. This software allowed for the direct connection and communication between the phone and the MBED in order to move the robot to the anchor marker.
+In order to facilitate communication between the MBED and our Swift code we utilized a fork of the Adafruit Bluefruit LE Connect app in conjunction with the MBED bluetooth module. This software allowed for the direct connection and communication between the phone and the MBED in order to move the robot to the anchor marker.
 
 #### Adafruit Bluefruit Pinout to MBED
 
@@ -160,7 +160,7 @@ In order to facilitate communication between the MBED and our Swift code we util
 
 ## IOS ARKit
 
-ARKit is an iOS based library for utilizing Augmented Reality in Swift. This software was used for Marker Tracking and Localization in order to navigate the robot.
+ARKit is an iOS based library for utilizing Augmented Reality in Swift. ARkit software was added onto a fork of the Adafruit Bluefruit app used for Marker Tracking and Localization in order to navigate the robot.
 
 #### AR Swift Code
 
